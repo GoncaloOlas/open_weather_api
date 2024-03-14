@@ -1,3 +1,0 @@
-/home/krisp/fun/open_weather_api/CMakeFiles/OpenWeatherApp.dir
-/home/krisp/fun/open_weather_api/CMakeFiles/edit_cache.dir
-/home/krisp/fun/open_weather_api/CMakeFiles/rebuild_cache.dir
