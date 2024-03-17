@@ -1,13 +1,28 @@
 cmake_minimum_required(VERSION 3.10)
-
-# Set the project name
 project(OpenWeatherApp)
 
-# Specify the C++ standard
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# Locate the necessary packages
+find_package(Boost REQUIRED COMPONENTS system)
+find_package(nlohmann_json 3.2.0 REQUIRED)
+find_package(CURL REQUIRED)
+include(CTest)  # Include CTest for testing functionality
 
-# subdirectories
-add_subdirectory(src)
-add_subdirectory(include)
-add_subdirectory(test)
+# Set the include directories
+include_directories(include)
+
+# Set the source files
+set(SOURCES 
+    src/main.cpp
+    src/weather_api.cpp
+)
+
+# Create the executable
+add_executable(OpenWeatherApp ${SOURCES})
+
+# Link necessary libraries
+target_link_libraries(OpenWeatherApp Boost::system nlohmann_json::nlohmann_json CURL::libcurl)
+
+# If testing is enabled, include the test directory
+if(BUILD_TESTING)
+    add_subdirectory(test)  # Include tests
+endif()
