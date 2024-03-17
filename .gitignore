@@ -34,5 +34,7 @@
 .vscode
 CMakeFiles/
 *.CMakeFiles
+*.cmake
 CMakeCache.txt
 Makefile
+OpenWeatherApp
