@@ -13,7 +13,7 @@ This is a simple client application for retrieving and displaying weather inform
 
 ## Features
 
-- Fetches weather data from a weather API.
+- Fetches weather data from the openweather API.
 - Displays current weather conditions including temperature, humidity, pressure, wind speed, weather description, and location.
 - Provides error handling for network requests and JSON parsing.
 - Easy-to-use interface for integrating weather data into your application. (soon)
@@ -70,4 +70,4 @@ Contributions are welcome! If you have any suggestions, improvements, or feature
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT license.
